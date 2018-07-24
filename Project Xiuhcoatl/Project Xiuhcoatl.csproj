@@ -332,11 +332,14 @@
     <Compile Include="Assets\Scripts\Arrow Turrent Scripts\ArrowTargetedMovement.cs" />
     <Compile Include="Assets\Scripts\Arrow Turrent Scripts\TurretBehavior.cs" />
     <Compile Include="Assets\Scripts\Arrow Turrent Scripts\TurretTrack.cs" />
+    <Compile Include="Assets\Scripts\Arrow Turrent Scripts\TurretTranslate.cs" />
     <Compile Include="Assets\Scripts\CameraAttach.cs" />
     <Compile Include="Assets\Scripts\FlameChange.cs" />
     <Compile Include="Assets\Scripts\HeldObject.cs" />
+    <Compile Include="Assets\Scripts\MovingShit\AddForce.cs" />
     <Compile Include="Assets\Scripts\MovingShit\Ballrelease.cs" />
     <Compile Include="Assets\Scripts\MovingShit\Translate.cs" />
+    <Compile Include="Assets\Scripts\MovingShit\TransOnCol.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\ColliderRaycast.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\DisableWalking.cs" />

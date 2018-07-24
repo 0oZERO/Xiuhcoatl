@@ -6,7 +6,7 @@ public class ArrowSpeed : MonoBehaviour {
 
     float timer;
     float shootTime; 
-    public float speed;
+    public float speed,timeToShoot;
     bool spawnArrow; 
 
     void start()
@@ -15,8 +15,12 @@ public class ArrowSpeed : MonoBehaviour {
     }
 	void Update () {
         timer += Time.deltaTime; 
+        if(timer >= timeToShoot)
+        {
             transform.Translate(0, 0, Time.deltaTime * speed); 
-        if (timer > 2.0f)
+        }
+
+        if (timer > 4.0f)
         {
             Destroy(this.gameObject); 
         }

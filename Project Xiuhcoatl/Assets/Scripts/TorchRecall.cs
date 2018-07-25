@@ -8,10 +8,29 @@ public class TorchRecall : MonoBehaviour {
     public float speed = 10f;       //Throwing Strength
     public GameObject parentHandL, ParentHandR;         //ParentHandR = SteamVR right controller, ParentHandR = SteamVR left controller
 
+
+    private Valve.VR.EVRButtonId menu = Valve.VR.EVRButtonId.k_EButton_ApplicationMenu;
+    //bool isDown = SteamVR_Controller.Input(SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.Leftmost)).G
+
+    private SteamVR_Controller.Device controller { get { return SteamVR_Controller.Input((int)trackedObj.index); } }
+    private SteamVR_TrackedObject trackedObj;
+
+    void Start()
+    {
+        trackedObj = GetComponent<SteamVR_TrackedObject>();
+    }
     // Update is called once per frame
     void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.R))        //Replace with SteamVR right hand designated button
+        // rig.transform.position = new Vector3(playerHead.transform.position.x, playerHead.transform.position.y, playerHead.transform.position.z);
+        if (controller == null)
+        {
+            Debug.Log("Controller not initialized");
+            return;
+        }
+
+        var device = SteamVR_Controller.Input((int)trackedObj.index);
+        if (device.GetPress(menu))        //Replace with SteamVR right hand designated button
         {
             item.transform.SetParent(ParentHandR.transform);
 

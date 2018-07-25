@@ -29,6 +29,7 @@ public class Hand : MonoBehaviour
             {
                 heldObject.transform.parent = null;
                 heldObject.GetComponent<Rigidbody>().isKinematic = false;
+                heldObject.GetComponent<Rigidbody>().useGravity = true;
                 heldObject.GetComponent<Rigidbody>().velocity = simulator.velocity;
                 heldObject.GetComponent<HeldObject>().parent = null;
                 heldObject = null;

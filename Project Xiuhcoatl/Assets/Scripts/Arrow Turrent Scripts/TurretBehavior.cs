@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretBehavior : MonoBehaviour {
 
     public GameObject arrow;
+    public GameObject arrowSpawn; 
     public GameObject trigger; 
     public Transform player;
     public float speed;
@@ -21,15 +22,17 @@ public class TurretBehavior : MonoBehaviour {
         {
             timer += Time.deltaTime;
             //timer = 0.0f; 
-            if (shotArrow == false)
+            if (timer < shootTime + 2)
             {
                 var targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
             }
-            Debug.Log(timer); 
+           // Debug.Log(timer); 
             if (timer >= shootTime && shotArrow == false)
             {
-                Instantiate(arrow, transform.position, transform.rotation);
+   
+                var newArrow = Instantiate(arrow, arrowSpawn.transform.position, transform.rotation);
+                newArrow.transform.parent = arrowSpawn.transform;
                 shotArrow = true;
             }
 

@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class TransOnCol : MonoBehaviour {
 
-
     public GameObject ceiling;
     public Transform startMarker, endMarker;
     public float speed; 
-    bool transStart = false, audioPlayed = false; 
+    bool transStart = false; 
 
 	void OnTriggerEnter(Collider other)
     {
@@ -19,16 +18,9 @@ public class TransOnCol : MonoBehaviour {
     }
     void Update()
     {
-        AudioSource audio = ceiling.GetComponent<AudioSource>(); 
         if (transStart == true)
         {
-            if (audioPlayed == false)
-            {
-             audio.Play();
-                audioPlayed = true; 
-            }
             ceiling.transform.Translate(Vector3.up * -speed * Time.deltaTime);
-
         }
     }
 }

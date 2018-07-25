@@ -352,6 +352,7 @@
     <Compile Include="Assets\Scripts\Rumble.cs" />
     <Compile Include="Assets\Scripts\RumbleScript.cs" />
     <Compile Include="Assets\Scripts\ShootSpear.cs" />
+    <Compile Include="Assets\Scripts\TorchRecall.cs" />
     <Compile Include="Assets\Scripts\Water Trial\BridgeDrop.cs" />
     <Compile Include="Assets\Scripts\Water Trial\RisingWater.cs" />
     <Compile Include="Assets\Scripts\Water Trial\TextOnCollision.cs" />

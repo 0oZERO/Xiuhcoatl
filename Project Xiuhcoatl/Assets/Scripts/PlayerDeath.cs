@@ -14,7 +14,7 @@ public class PlayerDeath : MonoBehaviour {
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Arrow") || other.gameObject.CompareTag("Trap"))
+        if(other.gameObject.CompareTag("Trap"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             colCheck = true;

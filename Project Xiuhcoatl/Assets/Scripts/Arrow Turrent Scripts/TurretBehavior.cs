@@ -11,12 +11,12 @@ public class TurretBehavior : MonoBehaviour {
     public float speed;
     public float shootTime; 
     float timer;
-    bool turretOn = false, shotArrow = false;
+    bool turretOn = false, shotArrow = false, soundPlayed = false;
 
     void Update()
     {
-         
-       bool turretOn = trigger.GetComponent<TurretTrack>().turretOn;
+        AudioSource audio = GetComponent<AudioSource>();
+        bool turretOn = trigger.GetComponent<TurretTrack>().turretOn;
 
         if(turretOn == true)
         {
@@ -24,6 +24,12 @@ public class TurretBehavior : MonoBehaviour {
             //timer = 0.0f; 
             if (timer < shootTime + 2)
             {
+                if(soundPlayed == false)
+                {
+                audio.Play();
+                    soundPlayed = true; 
+                }
+  
                 var targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
             }

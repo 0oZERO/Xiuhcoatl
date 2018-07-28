@@ -7,13 +7,20 @@ public class TransOnCol : MonoBehaviour {
     public GameObject ceiling;
     public Transform startMarker, endMarker;
     public float speed; 
-    bool transStart = false; 
+    bool transStart = false;
+    AudioSource audio; 
 
-	void OnTriggerEnter(Collider other)
+    void Start()
+    {
+        audio = ceiling.GetComponent<AudioSource>(); 
+    }
+
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            transStart = true; 
+            transStart = true;
+            audio.Play(); 
         }
     }
     void Update()

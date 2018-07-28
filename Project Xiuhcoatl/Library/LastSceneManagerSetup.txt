@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/MVP.unity
+- path: Assets/_Scenes/Water Trial.unity
   isLoaded: 1
   isActive: 1

@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class AddForce : MonoBehaviour {
 
-    public float force; 
-	// Use this for initialization
-	void Start () {
-        GetComponent<Rigidbody>().AddForce(0, 0, force); 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public float force;
+    public GameObject boulder;
+    AudioSource audio;
+
+    void Start()
+    {
+        audio = boulder.GetComponent<AudioSource>();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            boulder.GetComponent<Rigidbody>().AddForce(0, 0, force);
+            audio.Play();
+        }
+    }
 }

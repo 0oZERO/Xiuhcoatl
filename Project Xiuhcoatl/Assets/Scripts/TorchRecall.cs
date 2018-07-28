@@ -5,8 +5,10 @@ using UnityEngine;
 public class TorchRecall : MonoBehaviour {
 
     public GameObject item;         //Torch
+   // public GameObject otherHand; 
     public float speed = 10f;       //Throwing Strength
-    public GameObject parentHandL, ParentHandR;         //ParentHandR = SteamVR right controller, ParentHandR = SteamVR left controller
+    bool inHand; 
+    //public GameObject parentHandL, ParentHandR;         //ParentHandR = SteamVR right controller, ParentHandR = SteamVR left controller
 
 
     private Valve.VR.EVRButtonId menu = Valve.VR.EVRButtonId.k_EButton_ApplicationMenu;
@@ -30,16 +32,18 @@ public class TorchRecall : MonoBehaviour {
         }
 
         var device = SteamVR_Controller.Input((int)trackedObj.index);
-        if (device.GetPress(menu))        //Replace with SteamVR right hand designated button
+        if (device.GetPress(menu))      //Replace with SteamVR right hand designated button
         {
-            item.transform.SetParent(ParentHandR.transform);
+            item.transform.SetParent(this.transform);
 
             item.GetComponent<Rigidbody>().isKinematic = true;
             item.GetComponent<Rigidbody>().useGravity = false;
 
-            item.transform.rotation = ParentHandR.transform.rotation;
-            item.transform.position = ParentHandR.transform.position;
+            item.transform.rotation = this.transform.rotation;
+            item.transform.position = this.transform.position;
+
         }
+        /*
         else if (Input.GetKeyDown(KeyCode.L))       //Replace with SteamVR left hand designated button
         {
             item.transform.SetParent(parentHandL.transform);
@@ -67,5 +71,6 @@ public class TorchRecall : MonoBehaviour {
             }
            
         }
+        */
 	}
 }

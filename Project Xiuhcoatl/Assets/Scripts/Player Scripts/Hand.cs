@@ -7,6 +7,7 @@ public class Hand : MonoBehaviour
 {
     GameObject heldObject;
     Controller controller;
+    public Transform direction; 
     bool isHeld; 
 
     Rigidbody simulator;
@@ -31,6 +32,7 @@ public class Hand : MonoBehaviour
                 heldObject.GetComponent<Rigidbody>().isKinematic = false;
                 heldObject.GetComponent<Rigidbody>().useGravity = true;
                 heldObject.GetComponent<Rigidbody>().velocity = simulator.velocity;
+                heldObject.GetComponent<Rigidbody>().transform.eulerAngles = new Vector3(0, direction.transform.eulerAngles.y, 0);
                 heldObject.GetComponent<HeldObject>().parent = null;
                 heldObject = null;
             }

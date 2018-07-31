@@ -12,13 +12,14 @@ public class BridgeDrop : MonoBehaviour {
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject == triggerObj)
         {
-            bridge.GetComponent<Rigidbody>().useGravity = true; 
+            bridge.GetComponent<Rigidbody>().useGravity = true;
+            bridge.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
     private void Update()
     {
-        Debug.Log(dropBridge); 
+
     }
 }

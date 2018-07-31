@@ -4,30 +4,50 @@ using UnityEngine;
 
 public class TransOnCol : MonoBehaviour {
 
-    public GameObject ceiling;
-    public Transform startMarker, endMarker;
-    public float speed; 
+    public GameObject ceiling, torch;
+    public float speed, transTime;
+    float timer; 
     bool transStart = false;
-    AudioSource audio; 
+    //AudioSource audio; 
+
 
     void Start()
     {
-        audio = ceiling.GetComponent<AudioSource>(); 
+
+        //audio = ceiling.GetComponent<AudioSource>(); 
+        
     }
+
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject == torch)
         {
-            transStart = true;
-            audio.Play(); 
+            transStart = true; 
+            //audio.Play(); 
         }
     }
     void Update()
     {
-        if (transStart == true)
+        timer += Time.deltaTime; 
+    if (transStart == true)
         {
-            ceiling.transform.Translate(Vector3.up * -speed * Time.deltaTime);
+            if (timer <= transTime)
+            {
+                ceiling.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            }
+            else if (timer > transTime)
+            {
+                ceiling.transform.Translate(Vector3.forward * -speed * Time.deltaTime);
+                if (timer > transTime * 2)
+                {
+                    timer = 0.0f;
+                }
+            }
+        }
+    else if(transStart == false)
+        {
+            timer = 0.0f; 
         }
     }
 }

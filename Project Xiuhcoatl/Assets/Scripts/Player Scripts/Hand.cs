@@ -8,7 +8,8 @@ public class Hand : MonoBehaviour
     GameObject heldObject;
     Controller controller;
     public Transform direction; 
-    bool isHeld; 
+    [HideInInspector]
+    public bool isHeld; 
 
     Rigidbody simulator;
 
@@ -28,6 +29,7 @@ public class Hand : MonoBehaviour
             simulator.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
             if (controller.controller.GetPressUp(Valve.VR.EVRButtonId.k_EButton_Grip))
             {
+                isHeld = false; 
                 heldObject.transform.parent = null;
                 heldObject.GetComponent<Rigidbody>().isKinematic = false;
                 heldObject.GetComponent<Rigidbody>().useGravity = true;
@@ -53,6 +55,7 @@ public class Hand : MonoBehaviour
                         heldObject.transform.localRotation = Quaternion.identity;
                         heldObject.GetComponent<Rigidbody>().isKinematic = true;
                         heldObject.GetComponent<HeldObject>().parent = controller;
+                        isHeld = true; 
                     }
                 }
             }

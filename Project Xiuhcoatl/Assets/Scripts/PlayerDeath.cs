@@ -10,7 +10,7 @@ public class PlayerDeath : MonoBehaviour {
     bool colCheck = false;
     private void Update()
     {
-                    Debug.Log(colCheck);
+
     }
     void OnTriggerEnter(Collider other)
     {

@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 54559922916262594}
   - component: {fileID: 114405318588785644}
   - component: {fileID: 82254995951575794}
+  - component: {fileID: 114333920369282862}
+  - component: {fileID: 114335247862587664}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Trap
@@ -99,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1769285941098766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.9664936, y: 0.5, z: 30}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1539026, y: 0.15390259, z: 0.15390259}
   m_Children:
   - {fileID: 4106642479323382}
@@ -278,13 +280,41 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114405318588785644
+--- !u!114 &114333920369282862
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1769285941098766}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a98378aa93cec46a3941a25267b959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  speed: 20
+  interval: 2
+  spawnArrow: 0
+--- !u!114 &114335247862587664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769285941098766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d240ab83369ed4a9e030b386aac3e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  interval: 2
+--- !u!114 &114405318588785644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769285941098766}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd24dbce4014f524e817c49b533e7bb3, type: 3}
   m_Name: 

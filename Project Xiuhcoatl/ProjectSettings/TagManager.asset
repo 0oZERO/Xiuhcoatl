@@ -7,6 +7,7 @@ TagManager:
   - Vision
   - Arrow
   - Trap
+  - Player Head
   layers:
   - Default
   - TransparentFX

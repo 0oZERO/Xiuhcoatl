@@ -328,6 +328,7 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+    <Compile Include="Assets\Scripts\Activator.cs" />
     <Compile Include="Assets\Scripts\Arrow Turrent Scripts\ArrowSpeed.cs" />
     <Compile Include="Assets\Scripts\Arrow Turrent Scripts\ArrowTargetedMovement.cs" />
     <Compile Include="Assets\Scripts\Arrow Turrent Scripts\TurretBehavior.cs" />
@@ -338,6 +339,7 @@
     <Compile Include="Assets\Scripts\HeldObject.cs" />
     <Compile Include="Assets\Scripts\MovingShit\AddForce.cs" />
     <Compile Include="Assets\Scripts\MovingShit\Ballrelease.cs" />
+    <Compile Include="Assets\Scripts\MovingShit\MoveWithPlat.cs" />
     <Compile Include="Assets\Scripts\MovingShit\Translate.cs" />
     <Compile Include="Assets\Scripts\MovingShit\TransOnCol.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\ColliderRaycast.cs" />
@@ -346,13 +348,17 @@
     <Compile Include="Assets\Scripts\Player Scripts\Hand.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerCollider.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\ProtoMove.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\TorchThrow\Head.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\VRTouchpadMove.cs" />
     <Compile Include="Assets\Scripts\PlayerDeath.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\Rumble.cs" />
     <Compile Include="Assets\Scripts\RumbleScript.cs" />
     <Compile Include="Assets\Scripts\ShootSpear.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\TorchRecall.cs" />
+    <Compile Include="Assets\Scripts\WallPanel.cs" />
     <Compile Include="Assets\Scripts\Water Trial\BridgeDrop.cs" />
     <Compile Include="Assets\Scripts\Water Trial\RisingWater.cs" />
     <Compile Include="Assets\Scripts\Water Trial\TextOnCollision.cs" />

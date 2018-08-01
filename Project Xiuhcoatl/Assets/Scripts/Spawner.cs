@@ -20,8 +20,10 @@ public class Spawner : MonoBehaviour
 
     private float timer;
     private float time;
+    private float shotInterval;
     private bool shotProjectile;
     private bool done;
+    private bool prjectileTime;
 
 
     void Start()
@@ -49,7 +51,7 @@ public class Spawner : MonoBehaviour
             {
                 done = true;
             }
-            if (shotProjectile == false && done)
+            if (done && timer < interval + shotInterval)
             {
                 transform.parent = null;
                 var targetRotation = Quaternion.LookRotation(target.transform.position - transform.localPosition);
@@ -59,9 +61,15 @@ public class Spawner : MonoBehaviour
             if (timer > interval && shotProjectile == false)
             {
                 //Instantiate(projectile, projectileSpawn.transform.localPosition, transform.localRotation);
-                Instantiate(projectile, projectileSpawn.transform.position, transform.rotation);
+                var tempProjectile = Instantiate(projectile, projectileSpawn.transform.position, transform.rotation);
+                tempProjectile.transform.parent = projectileSpawn.transform;
+                shotInterval = projectile.GetComponent<Projectile>().interval;
                 shotProjectile = true;
             } 
+            /*if(timer > interval + shotInterval)
+            {
+                projectile.transform.parent = null;
+            }*/
         }
     }
 }

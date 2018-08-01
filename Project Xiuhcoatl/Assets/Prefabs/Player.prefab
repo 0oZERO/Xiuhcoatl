@@ -161,9 +161,10 @@ GameObject:
   - component: {fileID: 4201458476213802}
   - component: {fileID: 114965533221363418}
   - component: {fileID: 65547765751866538}
+  - component: {fileID: 114362538543066920}
   m_Layer: 2
   m_Name: Player Head
-  m_TagString: Untagged
+  m_TagString: Player Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -559,6 +560,7 @@ GameObject:
   - component: {fileID: 4246438908400304}
   - component: {fileID: 20488299980739272}
   - component: {fileID: 124222716643060702}
+  - component: {fileID: 114785250527137984}
   - component: {fileID: 114576316812928956}
   - component: {fileID: 114075606550701164}
   m_Layer: 2
@@ -1568,7 +1570,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1815147831194444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.66, y: 0.36, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4414859022886492}
@@ -2351,7 +2353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0664bbaea1862ae46a3f1e7b5e8334a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {fileID: 4558942116846410}
+  isHeld: 0
 --- !u!114 &114136619202099156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2393,6 +2395,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controllerRight: {fileID: 1954808810286712}
   controllerLeft: {fileID: 1554345140009352}
+--- !u!114 &114362538543066920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1163823093795208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 638bb7a63f3a57e489f3e422990afccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reticle: {fileID: 1108165547996930, guid: bfd9926122c396b47a720826729f883f, type: 2}
+  temp: {fileID: 1108165547996930, guid: bfd9926122c396b47a720826729f883f, type: 2}
+  active: 0
+  spawned: 0
+  destroyed: 0
 --- !u!114 &114519489544720604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2439,7 +2457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0664bbaea1862ae46a3f1e7b5e8334a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {fileID: 4199456853904680}
+  isHeld: 0
 --- !u!114 &114737409341871908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2477,6 +2495,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   speed: 10
+--- !u!114 &114785250527137984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501672174803148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 638bb7a63f3a57e489f3e422990afccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reticle: {fileID: 0}
+  temp: {fileID: 0}
+  active: 0
+  spawned: 0
+  destroyed: 0
 --- !u!114 &114794170629151924
 MonoBehaviour:
   m_ObjectHideFlags: 1

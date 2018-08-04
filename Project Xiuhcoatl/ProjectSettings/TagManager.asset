@@ -8,6 +8,7 @@ TagManager:
   - Arrow
   - Trap
   - Player Head
+  - Torch
   layers:
   - Default
   - TransparentFX

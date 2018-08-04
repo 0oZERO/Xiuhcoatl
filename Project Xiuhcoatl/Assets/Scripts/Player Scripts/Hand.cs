@@ -8,7 +8,7 @@ public class Hand : MonoBehaviour
     GameObject heldObject, playerHead, reticle;
     Controller controller;
     [HideInInspector]
-    public bool isHeld; 
+    public bool isHeld;
     bool active; 
     Rigidbody simulator;
     
@@ -26,9 +26,9 @@ public class Hand : MonoBehaviour
     {
         playerHead = GameObject.FindWithTag("Player Head");
  
-        simulator = new GameObject().AddComponent<Rigidbody>();
-        simulator.name = "simulator";
-        simulator.transform.parent = transform.parent;
+        //simulator = new GameObject().AddComponent<Rigidbody>();
+        //simulator.name = "simulator";
+       // simulator.transform.parent = transform.parent;
         controller = GetComponent<Controller>();
         active = false;
     }
@@ -38,11 +38,11 @@ public class Hand : MonoBehaviour
         playerHead.GetComponent<Head>().active = active;
         if (heldObject)
         {
-            simulator.velocity = (transform.position - simulator.position) * 50;
-            simulator.angularVelocity = (transform.eulerAngles); //- simulator.transform.eulerAngles) * 2;
+            // simulator.velocity = (transform.position - simulator.position) * 50;
+            //simulator.angularVelocity = (transform.eulerAngles); //- simulator.transform.eulerAngles) * 2;
             if (controller.controller.GetPressUp(Valve.VR.EVRButtonId.k_EButton_Grip))
             {
-                isHeld = false; 
+                isHeld = false;
                 heldObject.transform.parent = null;
                 heldObject.GetComponent<Rigidbody>().isKinematic = false;
                 heldObject.GetComponent<Rigidbody>().useGravity = true;
@@ -70,7 +70,7 @@ public class Hand : MonoBehaviour
                 heldObject.GetComponent<Rigidbody>().transform.LookAt(reticle.transform);
                 heldObject.GetComponent<HeldObject>().parent = null;
                 heldObject = null;
-                active = false; 
+                active = false;
             }
 
         }
@@ -90,12 +90,12 @@ public class Hand : MonoBehaviour
                         heldObject.transform.localRotation = Quaternion.identity;
                         heldObject.GetComponent<Rigidbody>().isKinematic = true;
                         heldObject.GetComponent<HeldObject>().parent = controller;
-                        isHeld = true; 
+                        isHeld = true;
                     }
                 }
             }
-            /*
-            if (controller.controller.GetPress(Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger))
+
+            if (controller.controller.GetPressDown(Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger))
             {
                 Collider[] cols = Physics.OverlapSphere(transform.position, 0.1f);
 
@@ -103,16 +103,21 @@ public class Hand : MonoBehaviour
                 {
                     if (heldObject == null && col.GetComponent<HeldObject>() && col.GetComponent<HeldObject>().parent == null)
                     {
+                        if(col.gameObject.CompareTag("Torch"))
+                        {
                         heldObject = col.gameObject;
                         heldObject.transform.parent = transform;
                         heldObject.transform.localPosition = Vector3.zero;
                         heldObject.transform.localRotation = Quaternion.identity;
                         heldObject.GetComponent<Rigidbody>().isKinematic = true;
                         heldObject.GetComponent<HeldObject>().parent = controller;
+                        isHeld = true;
+                        }
+                        
                     }
                 }
+
             }
-            */
         }
 
     }

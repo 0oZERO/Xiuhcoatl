@@ -342,6 +342,13 @@
     <Compile Include="Assets\Scripts\MovingShit\MoveWithPlat.cs" />
     <Compile Include="Assets\Scripts\MovingShit\Translate.cs" />
     <Compile Include="Assets\Scripts\MovingShit\TransOnCol.cs" />
+    <Compile Include="Assets\Scripts\Player Death\DeathCheck.cs" />
+    <Compile Include="Assets\Scripts\Player Death\DeathSends\BoulderDeath.cs" />
+    <Compile Include="Assets\Scripts\Player Death\DeathSends\CelingCrushDeath.cs" />
+    <Compile Include="Assets\Scripts\Player Death\DeathSends\FallingDeath.cs" />
+    <Compile Include="Assets\Scripts\Player Death\DeathSends\ProjectileDeath.cs" />
+    <Compile Include="Assets\Scripts\Player Death\DeathSends\WallDeath\ClosingWalls.cs" />
+    <Compile Include="Assets\Scripts\Player Death\DeathSends\WallDeath\ManagerClosingWalls.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\ColliderRaycast.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\DisableWalking.cs" />

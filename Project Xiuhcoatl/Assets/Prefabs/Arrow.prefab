@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 82254995951575794}
   - component: {fileID: 114333920369282862}
   - component: {fileID: 114335247862587664}
+  - component: {fileID: 114454807457892712}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Trap
@@ -321,6 +322,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   timeToShoot: 2
+--- !u!114 &114454807457892712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769285941098766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4fb111fe2944a4a9401d6e68a3b8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135910273178808148
 SphereCollider:
   m_ObjectHideFlags: 1

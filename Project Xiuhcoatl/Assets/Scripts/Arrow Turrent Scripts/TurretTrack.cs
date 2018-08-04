@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TurretTrack : MonoBehaviour {
 
-
-    public Transform player;
     [HideInInspector]
     public bool turretOn = false; 
 

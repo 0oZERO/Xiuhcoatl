@@ -328,6 +328,7 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+    <Compile Include="Assets\Scripts\Activator.cs" />
     <Compile Include="Assets\Scripts\Arrow Turrent Scripts\ArrowSpeed.cs" />
     <Compile Include="Assets\Scripts\Arrow Turrent Scripts\ArrowTargetedMovement.cs" />
     <Compile Include="Assets\Scripts\Arrow Turrent Scripts\TurretBehavior.cs" />
@@ -344,6 +345,14 @@
     <Compile Include="Assets\Scripts\Player Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\DisableWalking.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Hand.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Overlay.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Player Death\DeathCheck.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Player Death\DeathSends\BoulderDeath.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Player Death\DeathSends\CelingCrushDeath.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Player Death\DeathSends\FallingDeath.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Player Death\DeathSends\ProjectileDeath.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Player Death\DeathSends\WallDeath\ClosingWalls.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Player Death\DeathSends\WallDeath\ManagerClosingWalls.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerCollider.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\ProtoMove.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\VRTouchpadMove.cs" />
@@ -352,7 +361,10 @@
     <Compile Include="Assets\Scripts\Rumble.cs" />
     <Compile Include="Assets\Scripts\RumbleScript.cs" />
     <Compile Include="Assets\Scripts\ShootSpear.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\TorchRecall.cs" />
+    <Compile Include="Assets\Scripts\UI\DisplayDeathUI.cs" />
+    <Compile Include="Assets\Scripts\WallPanel.cs" />
     <Compile Include="Assets\Scripts\Water Trial\BridgeDrop.cs" />
     <Compile Include="Assets\Scripts\Water Trial\RisingWater.cs" />
     <Compile Include="Assets\Scripts\Water Trial\TextOnCollision.cs" />

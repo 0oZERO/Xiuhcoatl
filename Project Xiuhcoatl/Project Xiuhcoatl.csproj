@@ -365,6 +365,7 @@
     <Compile Include="Assets\Scripts\ShootSpear.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\TorchRecall.cs" />
+    <Compile Include="Assets\Scripts\UI\DisplayDeathUI.cs" />
     <Compile Include="Assets\Scripts\WallPanel.cs" />
     <Compile Include="Assets\Scripts\Water Trial\BridgeDrop.cs" />
     <Compile Include="Assets\Scripts\Water Trial\RisingWater.cs" />
